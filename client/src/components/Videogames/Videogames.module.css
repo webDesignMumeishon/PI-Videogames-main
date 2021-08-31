@@ -1,0 +1,121 @@
+.gamesimage{
+    /* width: 300px; */
+    /* width: 100%;
+    height: 200px; */
+    width: 165px;
+    height: 130px;
+}
+
+.body{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.notFoundImg{
+    width: 250px;
+    height: 300px;
+}
+
+.divText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.liGenre{
+    font-size: 12px;
+    color: #f8f8ff;
+    list-style: disc;
+    margin-left: 25px;
+    text-align: left;
+    
+}
+
+
+.gamesList{
+    /* display: flex;
+    flex-direction: column;
+    margin: 5px 2% 5px 2%;
+    width: 25%;
+    align-items: center; */
+
+    display: flex;
+    flex-direction: row;
+    margin: 5px 2% 5px 2%;
+    width: 45%;
+
+    /* background-color: #d3d3d31a; */
+    background: linear-gradient(#7f8285, #2c3e50);
+
+}
+
+.gamesList:hover{
+    border: solid 2px;
+    transition: all 0.3s ease 0s;
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+.gamesList > div > a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    padding: 10px;
+    width: 100%;
+    /* background-color:#6f787a; */
+    display: block;
+}
+
+.gamesList > div > a:hover{
+    transition: all 0.3s ease 0s;
+    color: red;
+}
+
+.gamesList > img:hover{
+    /* transition: all 0.3s ease 0s;
+    transform: scale(1.2);
+    cursor: pointer; */
+}
+
+.gamesList > img{
+    transition: all 0.3s ease 0s;
+}
+
+.mainBody{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    /* Agregado para que las tarjetas tengan una cierta altura */
+    height: 100%;
+}
+
+.showingTextWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.showingButtom{
+    cursor: pointer;
+    font-size: 16px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    color: cornflowerblue;
+}
+
+.showingButtom:hover{
+    border: solid 1px;
+}
+
+.showingText{
+    padding: 10px;
+    text-align: left;
+    margin-left: 80px;
+    display: inline-block;
+}

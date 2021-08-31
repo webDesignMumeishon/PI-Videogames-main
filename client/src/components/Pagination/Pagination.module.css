@@ -1,0 +1,47 @@
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: ghostwhite;
+    width: 70%;
+    margin: 15px auto 15px auto;
+
+}
+
+.listItem{
+    text-decoration: none;    
+    list-style: none;
+    padding: 10px;
+}
+
+.listItem > a{
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+}
+
+.listItem > a:focus{
+    background-color: #35586C;
+    border: solid 1px;
+
+}
+
+.btn{
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 50px;
+    border: none;
+    background-color: transparent;
+}
+
+.btn:hover{
+    color:tomato
+}
+
+.selected{
+    background-color: #35586C;
+    border: solid 1px;
+    border-radius: 2px;
+
+}

@@ -1,0 +1,61 @@
+.filterOptions{
+    display: flex;
+    justify-content: space-around;
+}
+
+.homepageBody{
+    position: relative;
+    top: 100px;
+}
+
+.filterOptions > form{
+    padding: 10px;
+}
+
+.displaying{
+    margin-bottom: 30px;
+}
+
+.buttoms{
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #0e1111;
+    color: white;
+}
+
+.videogamesBox{
+    height: 50vh;
+}
+
+.searchInput{
+    padding: 15px;
+
+}
+
+.inputbox{
+    padding: 5px;
+    margin: 0px 5px;
+    font-size: 20px;
+}
+
+.searchbtn{
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+.searchbtn:hover{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+.searchlabel{
+    padding: 5px;
+    font-size: 20px;
+
+}

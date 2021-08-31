@@ -1,0 +1,97 @@
+.divText{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+
+.danger{
+    background-color: red;
+    width: 33%;
+}
+
+.dangerText{
+    color: red;
+}
+
+.titleh2{
+    margin-bottom: 20px;
+}
+
+.subcheckbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subcheckbox > label{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px;
+}
+
+.subcheckbox > label:hover{
+    background-color: #35586C;
+}
+
+
+
+.formSpanTitle{
+    width: 33%;
+}
+
+.formInput{
+    width: 80%;
+    border: black solid;
+    margin: auto;
+    border-radius: 20px;
+    padding: 25px;
+    background: linear-gradient(#7f8285, #2c3e50);
+    position: relative;
+    top: 100px;
+}
+
+
+.divText > label{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    margin: auto;   
+}
+
+.divText > label > input{
+    width: 140px;
+}
+
+.checkboxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.submit{
+    width: 200px;
+    padding: 10px;
+    background-color:   #0c0c0c;
+    opacity: 0.7;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.submit:hover{
+    background-color: black;
+    opacity: 1;
+
+}
+
+
+
+

@@ -1,0 +1,60 @@
+.list{
+    /* background-color: red ; */
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    height: 10vh;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index:1; /*Add this*/
+    background-color: #000000;
+}
+
+.logo{
+    transform: scale(2.5);
+    cursor: pointer;
+    position: relative;
+    left: 20px;
+    color: white;
+    
+}
+
+.list > ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list > ul > a > li{
+    color: #edf0f1;
+    text-decoration: none;
+    padding: 5%;
+    width: 150px;
+    list-style: none;
+    transition: all 0.3s ease 0s;
+
+}
+
+.list > ul > a > li:hover{
+    /* color: black ; */
+    /* background-color: red; */
+    transition: all 0.3s ease 0s;
+}
+
+.list > ul > a{
+    /* color: #edf0f1; */
+    text-decoration: none;
+}
+
+
+.activeStyle {
+    background-color: "red";
+    border-radius: "5px";
+}
+
+

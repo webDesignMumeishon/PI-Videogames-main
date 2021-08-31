@@ -1,0 +1,59 @@
+.imageStyling{
+    margin: auto;
+    display: block;
+    position: relative;
+    animation-name: animationImg;
+    animation-duration: 0.8s;
+}
+
+.bodyLanding{
+    height: 80%;
+    position: relative;
+    top: 100px;
+}
+
+@keyframes animationImg {
+    0%   {top:-80px;}
+    100% {top:0px;}
+}
+
+.title{
+    animation: cssAnimation  0s 0.6s forwards;
+    visibility: hidden;
+}
+
+@keyframes cssAnimation  {
+    to  { visibility: visible; }
+}
+
+.enter{
+    position:absolute;
+    bottom: 73px;
+    opacity: 0.5;
+    background-color: red;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    animation: cssAnimation2  0s 0.6s forwards;
+    visibility: hidden;
+    color: white;
+    right: 340px;
+}
+
+.enter:hover{
+    opacity: 1;
+}
+
+@keyframes cssAnimation2  {
+    to  { visibility: visible; }
+}
+
+
+
+
+
+
+
+
+

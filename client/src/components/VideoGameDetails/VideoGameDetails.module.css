@@ -1,0 +1,32 @@
+.mainBody{
+    /* float: left; */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px;
+    position: relative;
+    top: 100px;
+    width: 75vw;
+    margin: auto;
+}
+
+.alignText{
+    text-align: initial;
+}
+
+.subBody{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-evenly; */
+    height: 105vh;
+}
+
+.genreList{
+    list-style: none;
+}
+
+.loading{
+    position: relative;
+    top: 200px;
+}

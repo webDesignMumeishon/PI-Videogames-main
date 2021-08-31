@@ -1,0 +1,68 @@
+.body{
+    width: 30%;
+    padding: 1%;
+    overflow-wrap: anywhere;
+}
+
+.dropdown{
+    width: 20rem;
+    margin-bottom: 20px;
+
+}
+
+.dropdownSelect{
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 3px;
+    background-color: black;
+    border: solid white 1px;
+
+}
+
+.dropdownSelect > span {
+    color: white;
+}
+
+
+.dropdownList{
+    border-radius: 4px;
+    color: black;
+    top: 110%;
+    left: 0;
+    right: 0;
+    color: white;
+}
+
+.formCheckboxes > label:hover{
+    background-color: #35586C;
+    cursor: pointer;
+}
+
+.dropdownListItem{
+    list-style: none;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.dropdownListItem:hover{
+    cursor: pointer;
+    border-radius: 4px;
+
+    background-color: grey;
+}
+
+.formCheckboxes{
+    text-align: justify;
+    margin: auto;
+    width: 85%;
+}
+
+.formCheckboxes > button{
+    display: block;
+    width: 100%;
+    padding: 2px;
+}
