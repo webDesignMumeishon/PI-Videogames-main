@@ -7,6 +7,8 @@ export const Videogames = ({games, loading, totalGames, clean}) => {
 
     if(loading){
         return <h2>Loading...</h2>
+        // return <img className={styles.loadingGif} src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif' alt="loading-gif"/> 
+
     }             
 
     return (

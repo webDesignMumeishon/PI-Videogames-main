@@ -18,6 +18,8 @@ function App() {
           <Route exact path='/home' component={Homepage}/>
           <Route path='/home/:id' component={VideoGameDetails}/>
           <Route path='/addvideogame' component={Addvideogame}/>
+          {/* //Ultimo - En caso de que la pagina no existe nos lleva a la Landing page de Nuevo */}
+          <Route path='*' exact={true} component={Landing} />
       </Switch>
      
     </div>

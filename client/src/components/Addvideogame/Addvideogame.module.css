@@ -1,7 +1,7 @@
 .divText{
     display: flex;
     flex-direction: column;
-    height: 100px;
+    height: 160px;
 }
 
 .danger{

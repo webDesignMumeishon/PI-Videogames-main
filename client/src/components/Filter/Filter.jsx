@@ -9,7 +9,8 @@ import {
     sortByNameAsc, sortByNameDes, 
     sortByRatingAsc, sortByRatingDes,
     sortByGenre,
-    sortByOrigin
+    sortByOrigin,
+    currentPage
 } from '../../actions/index.js'
 
 import { useState } from 'react';
@@ -36,17 +37,28 @@ export const Filter = (props) => {
     const handleInputChange = function(e) {
         e.preventDefault()
         let genreArr = []
+
         for(let i = 0; i < e.target.length -1 ; i++){
             if(e.target[i].checked ){
                 genreArr.push(e.target[i].value)
             }
         }
+
+        //access to redux - the array is sent to the reducer
         props.sortByGenre(genreArr)
+
+        //new - to go back to page 1 in case the filtering is made from another page
+        props.currentPage(1)
+
     }
 
     const handleSubmitSortByOrigin = (e) => {
-        console.log(e)
+        // console.log(e)
+
+        //new - to fix pagination when filtering
+        props.currentPage(1)
         
+        //regex is applied and sent to the store. The regex is applied is in the reducer to do the filtering
         if(e === "database"){
             let regex = /\w+-\w+-\w+-\w+-\w+/
             return props.sortByOrigin(regex)
@@ -54,7 +66,6 @@ export const Filter = (props) => {
         else{
             let regex = /^\d+$/
             return props.sortByOrigin(regex)
-
         }
     }
 
@@ -215,6 +226,8 @@ export const Filter = (props) => {
 function mapStateToProps(state) {
     return {
       videogames: state.videogamesLoaded,
+      //new
+      currentPageNum: state.currentpage
     };
 }
   
@@ -226,6 +239,8 @@ function mapDispatchToProps(dispatch) {
         sortByRatingAsc: () => dispatch(sortByRatingAsc()),
         sortByOrigin: (origin) => dispatch(sortByOrigin(origin)),
         sortByRatingDes: () => dispatch(sortByRatingDes()),
+        //new
+        currentPage: (page) => dispatch(currentPage(page))
     };
 }
   

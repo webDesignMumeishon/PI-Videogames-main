@@ -55,6 +55,7 @@ router.get('/', async (req, res, next) => {
 
 router.get('/', async (req, res) => {
     const {name} = req.query
+
     const videogamesForeignApi = (name) => {
         return fetch(`https://api.rawg.io/api/games?search=${name}&key=${MY_API_KEY}`)
         .then(res => res.json())
@@ -120,6 +121,8 @@ router.get('/', async (req, res) => {
 router.get('/:idVideogame', async (req, res) => {
     const {idVideogame} = req.params
 
+    let regex = /\w+-\w+-\w+-\w+-\w+/
+
     const videogamesForeignApi = (idVideogame) => {
         return fetch(`https://api.rawg.io/api/games/${idVideogame}?key=${MY_API_KEY}`)
         .then(res => res.json())
@@ -149,9 +152,8 @@ router.get('/:idVideogame', async (req, res) => {
         .catch(err => {console.log(err)})
     }
 
-    let resultFromApi = await videogamesForeignApi(idVideogame)
-    
-    if(!resultFromApi){
+
+    if(regex.test(idVideogame)){
         try{
             const resultFromDb = await Videogame.findAll({ 
                 where: {
@@ -168,10 +170,65 @@ router.get('/:idVideogame', async (req, res) => {
         catch(err){
             return res.json(err)
         }
-        
+    }
+    else{
+        let resultFromApi = await videogamesForeignApi(idVideogame)
+        return res.json(resultFromApi)
+
     }
 
-    return res.json(resultFromApi)
+    // const videogamesForeignApi = (idVideogame) => {
+    //     return fetch(`https://api.rawg.io/api/games/${idVideogame}?key=${MY_API_KEY}`)
+    //     .then(res => res.json())
+    //     .then(data => {
+            
+    //         //Si no se encontro el juego se retorna un false. Con ese false pasa a buscar en la base de datos.
+    //         if(data.detail === "Not found."){
+    //             return false
+    //         }
+
+    //         const games = {
+    //             name: data.name,
+    //             image: data.background_image,
+    //             description: data.description,
+    //             released: data.released,
+    //             rating: data.rating,
+
+    //             // old: trae las plataformas como un array.
+    //             // platforms: data.platforms,
+
+    //             //new: trae las plataformas en formato string. Fran dijo que se podia hacer asi. 
+    //             platforms: data.platforms.map( p => p.platform.name).join(" "),
+    //             genres: data.genres
+    //         }
+    //         return games
+    //     })
+    //     .catch(err => {console.log(err)})
+    // }
+
+    // let resultFromApi = await videogamesForeignApi(idVideogame)
+    
+    // if(!resultFromApi){
+    //     try{
+    //         const resultFromDb = await Videogame.findAll({ 
+    //             where: {
+    //                 id : idVideogame
+    //             }, 
+    //             include: { 
+    //                 model: Genre, 
+    //                 attributes:['name']
+    //             }
+                
+    //         })
+    //         return res.json(...resultFromDb)
+    //     }
+    //     catch(err){
+    //         return res.json(err)
+    //     }
+        
+    // }
+
+    // return res.json(resultFromApi)
 })
 
 

@@ -175,7 +175,18 @@ export const Addvideogame = () => {
 
                     <label htmlFor="description">
                     <span className={styles.formSpanTitle}>Description: </span>
-                        <input 
+                        {/* working old */}
+                        {/* <input 
+                            onFocus={handleFocus}
+                            onChange={handleInputChange} 
+                            type="text" id="description" 
+                            name="vd_description"
+                            value= {inputs["vd_description"]}
+                            className={errors.vd_description ? styles.danger : styles.formSpanTitle }
+                        /> */}
+
+                         <textarea 
+                            style={{width:"138px", height: "85px"}}
                             onFocus={handleFocus}
                             onChange={handleInputChange} 
                             type="text" id="description" 
@@ -183,6 +194,7 @@ export const Addvideogame = () => {
                             value= {inputs["vd_description"]}
                             className={errors.vd_description ? styles.danger : styles.formSpanTitle }
                         />
+
                         {errors.vd_description ? <span className={styles.danger}>{errors.vd_description}</span> : <span className={styles.formSpanTitle}>Insert Description</span>}
                     </label>
 

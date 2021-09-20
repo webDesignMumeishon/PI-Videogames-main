@@ -17,9 +17,13 @@ export const VideoGameDetails = (props) => {
     if(!loading){
         return <h1 className={styles.loading}>LOADING...</h1>
     }
-    
-    console.log(props.videogame)
 
+    //Ultimo - para manejar en caso que no exista el videojuego particular/Viene un DatabaseError desde la base de 
+    // datos por no encontrarse el videojuego ante el resultado fallido de la API
+    if(props.videogame.name === "SequelizeDatabaseError"){
+        return <h1 className={styles.loading}>The Game Wasn't Found</h1>
+    }
+    
     return (
 
         <div  id="mainBody">
@@ -47,29 +51,29 @@ export const VideoGameDetails = (props) => {
                         <h3>Name: </h3>
                         <p>{props.videogame.name}</p>
                         <br/>
-                        <h3>Genres</h3>
+                        <h3>Genres</h3> 
                         <ul className={styles.alignText}>
-                            {props.videogame.genres.map(g => <li className={styles.genreList}>{g.name}</li>)}
+                            {props.videogame.genres?.map(g => <li className={styles.genreList}>{g.name}</li>)}
                         </ul>
                         <br/>
                         <h3>Platforms: </h3>
                         <p>
-                            {props.videogame.platforms}
+                            {props.videogame?.platforms}
                         </p>
                         <br/>
                         <h3>Rating: </h3>
                         <p>
-                            {props.videogame.rating}
+                            {props.videogame?.rating}
                         </p>
                         <br/>
                         <h3>Released: </h3>
                         <p> 
-                            {props.videogame.released}
+                            {props.videogame?.released}
                         </p>
                         <br/>
                         <h3>Description: </h3>
                         <p>
-                            {props.videogame.description.replace(/<[^>]*>/g, "")}
+                            {props.videogame?.description.replace(/<[^>]*>/g, "")}
                         </p>
                     </div>
                 

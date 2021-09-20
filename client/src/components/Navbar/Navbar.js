@@ -3,10 +3,10 @@ import {NavLink} from 'react-router-dom'
 import styles from './Navbar.module.css'
 import { CgGames } from 'react-icons/cg';
 
+
 const activeStyle = {
     backgroundColor: "#6f787a",
     borderRadius: "5px",
-    // color: "black",
 }
 
 

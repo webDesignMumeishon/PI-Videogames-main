@@ -6,6 +6,10 @@
     height: 130px;
 }
 
+.loadingGif{
+ background-color: white;
+}
+
 .body{
     display: flex;
     flex-direction: row-reverse;

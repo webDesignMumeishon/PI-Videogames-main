@@ -1,24 +1,46 @@
-<p align='left'>
-    <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
+<p align='center'>
+    <img src='./videogame.png' height="200"/>
 </p>
 
-# Individual Project - Henry Videogames
+# Individual Project -  Videogames
 
-<p align="right">
+<!-- <p align="right">
   <img height="200" src="./videogame.png" />
-</p>
+</p> -->
 
-## Objetivos del Proyecto
+The project consist of calling an API (https://rawg.io/apidocs) to show an initial set of 80 videogames in the /home page to see a variety of items and click over one and access to details about the platforms, genres, name, released date, etc. At the bottom of the page a pagination was created to navigate through the differents games brought by the API called.
+In the right side filtering options allow the user to interect with the videogames originally requested. Filtering options by name, rate, genre, and origin (since a videogame can be found the in API or in a Database)
+The app has its server from where all the calls are made.
+The backend counts with its own database created in postgress, an user can create a new game which will be stored in the database after completing a from located in the /addvideogame route
+Hope you like the App!
 
-- Construir una App utlizando React, Redux, Node y Sequelize.
-- Afirmar y conectar los conceptos aprendidos en la carrera.
-- Aprender mejores prácticas.
-- Aprender y practicar el workflow de GIT.
-- Usar y practicar testing.
+## Installation
 
-## Horarios y Fechas
+-Install all dependencies inside ./api folder
 
-El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
+-Install all dependencies inside ./client folder
+
+-Create a postgres database ('videogames')
+
+-Go to https://rawg.io/apidocs and create an account in order to obtain an apiKey
+
+-Once you have your apiKey, create a .env file in ./api with the following:
+
+DB_USER={your postgres username}
+DB_PASSWORD={your postgres password}
+DB_HOST=localhost
+DB_NAME={your postgres database name}
+API_KEY_1={your spoonacular apiKey}
+
+-Open a terminal and run "npm start" on ./api
+
+-Open another terminal and run "npm start" on ./client
+
+## Technologies
+
+Front-end: React.js, Redux.js, plain CSS / CSS Modules.
+Back-end: Node.js, Express.js
+Database: PostgreSQL, Sequelize
 
 ## Comenzando
 

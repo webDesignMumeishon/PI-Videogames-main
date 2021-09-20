@@ -15,7 +15,6 @@ import  {Videogames} from '../Videogames/Videogames.jsx';
 import  Pagination  from '../Pagination/Pagination.js'; 
 
 
-
 export const Homepage = (props) => {
     
     const [videogame, setVideogame] = useState('')
@@ -55,7 +54,7 @@ export const Homepage = (props) => {
     return (
         <div className={styles.homepageBody}>
             <form onSubmit={handleSubmit} className={styles.searchInput}>
-                <label className={styles.searchlabel    } htmlFor="videogame">Videogame: </label>
+                <label className={styles.searchlabel} htmlFor="videogame">Videogame: </label>
                 <input 
                     type="text"
                     value={videogame}
