@@ -42,10 +42,11 @@ Front-end: React.js, Redux.js, plain CSS / CSS Modules.
 Back-end: Node.js, Express.js
 Database: PostgreSQL, Sequelize
 
-## Comenzando
+## Website's view
 
- 1. Forkear el repositorio para tener una copia del mismo en sus cuentas
- 2. Clonar el repositorio en sus computadoras para comenzar a trabajar
+<p align='center'>
+    <img src='./landing.png' height="200"/>
+</p>
 
 Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
 
