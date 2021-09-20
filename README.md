@@ -44,8 +44,19 @@ Database: PostgreSQL, Sequelize
 
 ## Website's view
 
+<h3>/landing</h3>
 <p align='center'>
     <img src='./landing.png' height="500"/>
+</p>
+
+<h3>/home</h3>
+<p align='center'>
+    <img src='./home.png' height="500"/>
+</p>
+
+<h3>/home</h3>
+<p align='center'>
+    <img src='./addvideogames.png' height="500"/>
 </p>
 
 Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
