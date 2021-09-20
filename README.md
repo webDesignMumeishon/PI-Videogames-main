@@ -62,7 +62,7 @@ Database: PostgreSQL, Sequelize
 
 <h3>home/:videogameid</h3>
 <p align='center'>
-    <img src='./videogamedetail.png' height="500"/>
+    <img src='./videogamedetails.png' height="500"/>
 </p>
 
 Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
