@@ -45,7 +45,7 @@ Database: PostgreSQL, Sequelize
 ## Website's view
 
 <p align='center'>
-    <img src='./landing.png' height="200"/>
+    <img src='./landing.png' height="500"/>
 </p>
 
 Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
