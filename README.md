@@ -59,6 +59,12 @@ Database: PostgreSQL, Sequelize
     <img src='./addvideogames.png' height="500"/>
 </p>
 
+
+<h3>home/:videogameid</h3>
+<p align='center'>
+    <img src='./videogamedetail.png' height="500"/>
+</p>
+
 Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
 
 __IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
