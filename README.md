@@ -61,6 +61,14 @@ Database: PostgreSQL, Sequelize
 
 
 <h3>home/:videogameid</h3>
+
+__Ruta de detalle de videojuego__: debe contener
+- [ ] Los campos mostrados en la ruta principal para cada videojuegos (imagen, nombre, y géneros)
+- [ ] Descripción
+- [ ] Fecha de lanzamiento
+- [ ] Rating
+- [ ] Plataformas
+
 <p align='center'>
     <img src='./videogamedetails.png' height="500"/>
 </p>
@@ -149,12 +157,7 @@ __Ruta principal__: debe contener
 
 __IMPORTANTE__: Dentro de la Ruta Principal se deben mostrar tanto los videjuegos traidos desde la API como así también los de la base de datos. Debido a que en la API existen alrededor de 500 mil juegos, por cuestiones de performance pueden tomar la simplificación de obtener y paginar los primeras 100.
 
-__Ruta de detalle de videojuego__: debe contener
-- [ ] Los campos mostrados en la ruta principal para cada videojuegos (imagen, nombre, y géneros)
-- [ ] Descripción
-- [ ] Fecha de lanzamiento
-- [ ] Rating
-- [ ] Plataformas
+
 
 __Ruta de creación de videojuegos__: debe contener
 - [ ] Un formulario __controlado__ con los siguientes campos
