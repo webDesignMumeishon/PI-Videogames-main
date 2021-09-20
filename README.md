@@ -54,7 +54,7 @@ Database: PostgreSQL, Sequelize
     <img src='./home.png' height="500"/>
 </p>
 
-<h3>/home</h3>
+<h3>/addvideogames</h3>
 <p align='center'>
     <img src='./addvideogames.png' height="500"/>
 </p>
