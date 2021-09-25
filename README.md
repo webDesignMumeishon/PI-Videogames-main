@@ -44,9 +44,10 @@ API_KEY_1={your spoonacular apiKey}
 Front-end:
 - [ ] React
 - [ ] Redux
-- [ ] Express
+
 Back-end
 - [ ] Sequelize - Postgres
+- [ ] Express
 
 #### Database
 

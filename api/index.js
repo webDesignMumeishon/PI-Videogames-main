@@ -26,8 +26,5 @@ conn.sync({ force: true }).then(() => {
         });
       })
     })
-
-
-
   });
 });
