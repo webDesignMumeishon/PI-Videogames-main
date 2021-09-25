@@ -7,17 +7,18 @@ const {
   DB_USER, DB_PASSWORD, DB_HOST, MY_API_KEY, DATABASE_URL, NODE_ENV
 } = process.env;
 
-const isProduction = process.env.NODE_ENV === "production";
+const isDevelopment = NODE_ENV === "development";
 
-const sequelize = isProduction ? 
+
+const sequelize = isDevelopment ? 
 new Sequelize(DATABASE_URL, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 }) 
 : 
 new Sequelize(DATABASE_URL, {
-  // native: true, // lets Sequelize know we can use pg-native for ~30% more speed
-  // dialect: "postgres",
+  native: true, // lets Sequelize know we can use pg-native for ~30% more speed
+  dialect: "postgres",
   dialectOptions: {
     ssl: {
       require: true, // This will help you. But you will see nwe error
