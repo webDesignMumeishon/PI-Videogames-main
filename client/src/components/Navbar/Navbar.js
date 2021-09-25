@@ -1,7 +1,8 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import styles from './Navbar.module.css'
-import { CgGames } from 'react-icons/cg';
+import { FaUser } from 'react-icons/fa';
+
 
 
 const activeStyle = {
@@ -13,9 +14,13 @@ const activeStyle = {
 export const Navbar = () => {
     return (
         <nav className={styles.list}>
-            <NavLink to="/home">
+            {/* <NavLink to="/home">
                 <CgGames className={styles.logo}/>
+            </NavLink> */}
+             <NavLink to="/home">
+              <FaUser className={styles.logo}/>
             </NavLink>
+
             <ul>
                 <NavLink activeStyle={activeStyle} to="/home">
                     <li>Home</li>
