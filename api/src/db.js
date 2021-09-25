@@ -9,8 +9,17 @@ const {
 
 
 const sequelize = new Sequelize(DATABASE_URL, {
-  logging: false, // set to console.log to see the raw SQL queries
-  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+  // logging: false, // set to console.log to see the raw SQL queries
+  // native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+
+  //new
+  dialect: "postgres",
+  native: true, //# adding this maybe breaks on hobby dyno
+  ssl: true, 
+  dialectOptions: {
+    ssl: true
+  }
+  
 });
 const basename = path.basename(__filename);
 
