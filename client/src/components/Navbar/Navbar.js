@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import styles from './Navbar.module.css'
-import { FaUser } from 'react-icons/fa';
+// import { FaUser } from 'react-icons/fa';
 
 
 
@@ -17,7 +17,7 @@ export const Navbar = () => {
             {/* <NavLink to="/home">
                 <CgGames className={styles.logo}/>
             </NavLink> */}
-            
+
              {/* <NavLink to="/home">
               <FaUser className={styles.logo}/>
             </NavLink> */}
