@@ -8,9 +8,10 @@ const {
   MY_API_KEY
 } = process.env;
 
+
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
+  server.listen(process.env.PORT || 3001, () => {
     //Message from post
     console.log('%s listening at 3001');
 

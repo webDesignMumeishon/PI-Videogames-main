@@ -4,14 +4,19 @@ const fs = require('fs');
 const path = require('path');
 
 const {
-  DB_USER, DB_PASSWORD, DB_HOST, MY_API_KEY, DATABASE_URL
+  DB_USER, DB_PASSWORD, DB_HOST, MY_API_KEY, DATABASE_URL, NODE_ENV
 } = process.env;
 
+const isProduction = process.env.NODE_ENV === "production";
 
-const sequelize = new Sequelize(DATABASE_URL, {
+const sequelize = isProduction ? 
+new Sequelize(DATABASE_URL, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-
+}) 
+: 
+new Sequelize(DATABASE_URL, {
+  native: true, // lets Sequelize know we can use pg-native for ~30% more speed
   dialect: "postgres",
   dialectOptions: {
     ssl: {
@@ -19,9 +24,12 @@ const sequelize = new Sequelize(DATABASE_URL, {
       rejectUnauthorized: false // This line will fix new error
     }
   },
-
-  
 });
+
+
+
+
+
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
