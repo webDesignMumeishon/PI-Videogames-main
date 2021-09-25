@@ -7,8 +7,6 @@ const {
   DB_USER, DB_PASSWORD, DB_HOST, MY_API_KEY, DATABASE_URL
 } = process.env;
 
-console.log("ok", DATABASE_URL)
-
 
 const sequelize = new Sequelize(DATABASE_URL, {
   logging: false, // set to console.log to see the raw SQL queries
