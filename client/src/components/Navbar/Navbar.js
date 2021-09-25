@@ -17,9 +17,10 @@ export const Navbar = () => {
             {/* <NavLink to="/home">
                 <CgGames className={styles.logo}/>
             </NavLink> */}
-             <NavLink to="/home">
+            
+             {/* <NavLink to="/home">
               <FaUser className={styles.logo}/>
-            </NavLink>
+            </NavLink> */}
 
             <ul>
                 <NavLink activeStyle={activeStyle} to="/home">
