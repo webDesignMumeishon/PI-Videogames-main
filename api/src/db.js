@@ -17,11 +17,11 @@ new Sequelize(DATABASE_URL, {
 }) 
 : 
 new Sequelize(DATABASE_URL, {
-  native: true, // lets Sequelize know we can use pg-native for ~30% more speed
-  dialect: "postgres",
+  // native: true, // lets Sequelize know we can use pg-native for ~30% more speed
+  // dialect: "postgres",
   dialectOptions: {
     ssl: {
-      require: true, // This will help you. But you will see nwe error
+      // require: true, // This will help you. But you will see nwe error
       rejectUnauthorized: false // This line will fix new error
     }
   },
