@@ -1,6 +1,11 @@
+// https://videogames-pi-app.herokuapp.com/
+// require('dotenv').config();
+
+const {REACT_APP_SERVER_BASE_URL} = process.env
+
 export function getVideogames() {
     return function(dispatch) {
-        return fetch("http://localhost:3001/videogame")
+        return fetch(`${REACT_APP_SERVER_BASE_URL}/videogame`)
         .then(response => response.json())
         .then(json => {
             // console.log("json response", json)
@@ -15,7 +20,7 @@ export function currentPage(payload){
 
 export function searchVideogames(name) {
     return function(dispatch) {
-        return fetch(`http://localhost:3001/videogame?name=${name}`)
+        return fetch(`${REACT_APP_SERVER_BASE_URL}/videogame?name=${name}`)
         .then(response => response.json())
         .then(json => {
             // console.log("json response", json)
@@ -43,7 +48,7 @@ export function sortByRatingDes(){
 
 export function videogameDetails(id){
     return function(dispatch) {
-        return fetch(`http://localhost:3001/videogame/${id}`)
+        return fetch(`${REACT_APP_SERVER_BASE_URL}/videogame/${id}`)
         .then(response => response.json())
         .then(json => {
             // console.log("json response", json)

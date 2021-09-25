@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './Addvideogame.module.css'  
+const {REACT_APP_SERVER_BASE_URL} = process.env
+
 
 export const Addvideogame = () => {
     const [errors, setErrors] = React.useState({});
@@ -144,7 +146,7 @@ export const Addvideogame = () => {
             return alert("Missing Inputs.\r Please Insert Values")
         }
 
-        fetch('http://localhost:3001/videogame', {
+        fetch(`${REACT_APP_SERVER_BASE_URL}/videogame`, {
             method: 'POST',
             body: JSON.stringify({ ...data }),
             headers: { 'Content-Type': 'application/json' },
