@@ -3,6 +3,7 @@
 
 const {REACT_APP_SERVER_BASE_URL} = process.env
 
+
 export function getVideogames() {
     return function(dispatch) {
         return fetch(`${REACT_APP_SERVER_BASE_URL}/videogame`)
