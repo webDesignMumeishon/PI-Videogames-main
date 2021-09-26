@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './Filter.module.css'
-import { AiFillCaretDown } from 'react-icons/ai';
-import { AiFillCaretUp } from 'react-icons/ai';
+
+
+// import { AiFillCaretDown } from 'react-icons/ai';
+// import { AiFillCaretUp } from 'react-icons/ai';
 
 import { connect } from "react-redux";
 
@@ -75,7 +77,7 @@ export const Filter = (props) => {
             <div className={styles.dropdown}>
                 <div className={styles.dropdownSelect} onClick={() => setDisplayName(!displayName)}>
                         <span>Order by Name</span>
-                        {displayName ? <AiFillCaretUp style={{color: "white"}} /> : <AiFillCaretDown style={{color: "white"}} />}
+                        {/* {displayName ? <AiFillCaretUp style={{color: "white"}} /> : <AiFillCaretDown style={{color: "white"}} />} */}
                 </div>  
 
                 {displayName ? <div className={styles.dropdownList}>
@@ -89,7 +91,7 @@ export const Filter = (props) => {
             <div className={styles.dropdown}>
                 <div className={styles.dropdownSelect} onClick={() => setDisplayRating(!displayRating)}>
                         <span>Order by Rating</span>
-                        {displayRating ? <AiFillCaretUp style={{color: "white"}} /> : <AiFillCaretDown style={{color: "white"}} />}
+                        {/* {displayRating ? <AiFillCaretUp style={{color: "white"}} /> : <AiFillCaretDown style={{color: "white"}} />} */}
                 </div>  
 
                 {displayRating ? <div className={styles.dropdownList}>
@@ -103,7 +105,7 @@ export const Filter = (props) => {
             <div className={styles.dropdown}>
                 <div className={styles.dropdownSelect} onClick={() => setDisplayGenre(!displayGenre)}>
                         <span>Order by Genre</span>
-                        {displayGenre ? <AiFillCaretUp style={{color: "white"}} /> : <AiFillCaretDown style={{color: "white"}} />}
+                        {/* {displayGenre ? <AiFillCaretUp style={{color: "white"}} /> : <AiFillCaretDown style={{color: "white"}} />} */}
                 </div>  
 
                 {displayGenre ? 
@@ -206,7 +208,7 @@ export const Filter = (props) => {
             <div className={styles.dropdown}>
                 <div className={styles.dropdownSelect} onClick={() => setDisplayOrigin(!displayOrigin)}>
                         <span>Order by Origin</span>
-                        {displayOrigin ? <AiFillCaretUp style={{color: "white"}} /> : <AiFillCaretDown style={{color: "white"}} />}
+                        {/* {displayOrigin ? <AiFillCaretUp style={{color: "white"}} /> : <AiFillCaretDown style={{color: "white"}} />} */}
                 </div>  
 
                 {displayOrigin ? <div className={styles.dropdownList}>
