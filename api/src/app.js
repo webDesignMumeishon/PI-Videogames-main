@@ -13,7 +13,7 @@ const server = express();
 
 server.name = 'API';
 
-const Access_Origin = NODE_ENV === "development" ? "http://localhost:3000" : "videogames-app-pi.netlify.app" 
+const Access_Origin = NODE_ENV === "development" ? "http://localhost:3000" : "https://videogames-app-pi.netlify.app" 
 
 
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
