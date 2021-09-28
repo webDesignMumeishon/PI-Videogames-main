@@ -2,6 +2,8 @@
     <img src='./videogame.png' height="200"/>
 </p>
 
+Visit: <a href="https://videogames-app-pi.netlify.app/">Click Here</a>
+
 # Individual Project -  Videogames
 
 The project consist of calling an API (https://rawg.io/apidocs) to show an initial set of 80 videogames in the /home page to see a variety of items and click over one and access to details about the platforms, genres, name, released date, etc. At the bottom of the page a pagination was created to navigate through the differents games brought by the API called.
